@@ -1,0 +1,11 @@
+app_ports:
+  - name: web
+    port: 8080
+  - name: monitoring
+    port: 9000
+
+application_envs:
+  - name: CLOUD_CONFIG_ENABLED
+    value: "true"
+  - name: JAVA_OPTS
+    value: "-xmx256M -xms256M"

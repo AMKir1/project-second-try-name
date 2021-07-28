@@ -1,0 +1,4 @@
+include:
+  - project: 'nwtn/infrastructure/deploy-app-ansible'
+    ref: master
+    file: '/cicd_templates/integration_template.gitlab-ci.yml'

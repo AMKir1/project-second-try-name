@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>project-second-try-name</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+
+  <parent>
+    <groupId>group.nwtn.broker</groupId>
+    <artifactId>integration-parent</artifactId>
+    <version>3.2.0</version>
+  </parent>
+
+  <properties>
+    <source>11</source>
+    <target>11</target>
+    <broker-modular-libraries.version>1.8.0</broker-modular-libraries.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>group.nwtn.broker</groupId>
+        <artifactId>broker-modular-libraries</artifactId>
+        <version>${broker-modular-libraries.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+  <dependencies>
+    
+    <dependency>
+      <groupId>group.nwtn.broker</groupId>
+      <artifactId>broker-commons</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>group.nwtn.broker</groupId>
+      <artifactId>broker-kafka</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>group.nwtn.broker</groupId>
+      <artifactId>broker-persistence-jpa-integration-db</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>group.nwtn.broker</groupId>
+      <artifactId>broker-persistence-jpa-qort-db</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>group.nwtn.broker</groupId>
+      <artifactId>broker-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+
+
+</project>

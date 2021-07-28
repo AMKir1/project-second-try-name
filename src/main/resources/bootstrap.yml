@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: project-second-try-name
+  cloud:
+    config:
+      enabled: ${CLOUD_CONFIG_ENABLED:true}
+      uri: 'http://config-service:8080'
+      fail-fast: true
+      request-connect-timeout: 10000

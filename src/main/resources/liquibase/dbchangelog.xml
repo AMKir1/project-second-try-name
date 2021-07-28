@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+<!-- Для каждой новоей версии содержащей правки БД необходисмо ставить тэг.
+     Тэг позволяет откатить базу до указанной версии через rollback скрипты -->
+    <changeSet id="tag version 1.0.0" author="">
+        <tagDatabase tag="1.0.0"/>
+    </changeSet>
+    <changeSet  id="01" author="">
+        <comment></comment>
+        <sqlFile path="sql/M-01.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="rollback/R-01.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
